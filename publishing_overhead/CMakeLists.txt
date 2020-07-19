@@ -1,0 +1,7 @@
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(publishing_overhead_publisher publishing_overhead_publisher.cpp)
+
+ament_target_dependencies(publishing_overhead_publisher rclcpp std_msgs)

@@ -1,0 +1,7 @@
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(publisher_without_spin_publisher publisher_without_spin_publisher.cpp)
+
+ament_target_dependencies(publisher_without_spin_publisher rclcpp std_msgs)

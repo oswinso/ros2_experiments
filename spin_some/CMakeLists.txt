@@ -1,0 +1,9 @@
+find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+
+add_executable(spin_some_publisher spin_some_publisher.cpp)
+add_executable(spin_some_subscriber spin_some_subscriber.cpp)
+
+ament_target_dependencies(spin_some_publisher rclcpp std_msgs)
+ament_target_dependencies(spin_some_subscriber rclcpp std_msgs)
